@@ -1,0 +1,125 @@
+
+html * {
+    margin: 0;
+    padding: 0;
+}
+
+#page * {
+    border: 1px solid red;
+}
+
+/* PAGE */
+
+#page {
+    display: flex;
+
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* NAVBAR */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2lh;
+
+    background-color: #1992d4;
+    color: white;
+
+    padding: 1lh;
+}
+
+#dashboard {
+    font-size: 1.25em;
+}
+
+#main-menu, #settings-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1lh;
+}
+
+/* HEADER */
+
+header {
+    padding: 1lh;
+}
+
+/* MAIN */
+
+main {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+
+    background-color: #e2e8f0;
+
+    padding: 1rem;
+}
+
+#LHS {
+    flex: 1;
+}
+
+#RHS {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    padding: 0.5lh 0;
+}
+
+/* YOUR PROJECTS SECTION */
+
+#projects-grid {
+    display: grid;
+    font-size: 1rem;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill,minmax(30ch, 1fr));
+}
+
+/* CARDS */
+
+.card {
+    font-size: 1rem;
+    width: 25ch;
+
+    background-color: white;
+    border-radius: 0.5rem;
+
+    padding: 1rem;
+}
+
+.card-text {
+    height: 6lh;
+    overflow: hidden;
+}
+
+/* ANNOUNCEMENTS & TRENDING SECTIONS */
+
+.section-content{
+    width: 20ch;
+
+    font-size: 0.75rem;
+    background-color: white;
+    border-radius: 0.5rem;
+
+    padding: 0.5rem;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 1lh;
+}

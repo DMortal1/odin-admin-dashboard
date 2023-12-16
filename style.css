@@ -1,0 +1,384 @@
+
+html * {
+    box-sizing: border-box;
+
+    font-family: 'Roboto', sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* #page * {
+    border: 1px solid red;
+} */
+
+/* ----- PAGE ----- */
+
+#page {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr 0.5fr;
+    /*
+    |0|0000|
+    --------
+    |0|0000|
+    |0|0000|
+    |0|0000|
+    |0|0000|
+    --------
+    |0|0000|
+    */
+
+    min-height: 100vh;
+
+    background-color: #e2e8f0;
+}
+
+    /* ----- NAV ----- */
+
+    nav {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        grid-gap: 35px;
+
+        background-color: #1992d4;
+        color: white;
+        box-shadow: 0px 2px 3px rgb(175, 175, 175);
+
+        padding: 15px 20px 20px 15px;
+    }
+
+    #dashboard {
+        display: flex;
+        align-items: center;
+
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    nav img {
+        filter: invert(1);
+    }
+
+    #dashboard img {
+        width: 43px;
+        padding-right: 8px;
+    }
+
+    nav ul {
+        list-style: none;
+
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    nav li {
+        display: flex;
+        align-items: center;
+
+        margin-left: 7px;
+        padding-bottom: 20px;
+    }
+
+    nav ul img {
+        width: 20px;
+        margin-right: 20px;
+    }
+
+    #settings-menu {
+        padding-top: 15px;
+    }
+
+    /* ----- /NAV ----- */
+
+    /* ----- HEADER ----- */
+
+    header {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+
+        /* position: sticky;
+        top: 0; */
+
+        background-color: white;
+        box-shadow: 0px 2px 3px rgb(175, 175, 175);
+    }
+
+    #header-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #search-form {
+        display: flex;
+        padding: 17px 0 0 30px;
+        align-items: center;
+
+        margin-bottom: 1lh;
+    }
+
+    #search-icon {
+        margin-right: 8px;
+        height: 25px;
+    }
+
+    #search-input {
+        width: 45vw;
+        height: 25px;
+        min-width: 471px;
+
+        background-color: #e2e8f0;
+        border: none;
+        border-radius: 15px;
+
+        padding-left: 10px;
+    }
+
+    #profile-top {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        /* width: 20vw;
+        max-width: 250px;
+        min-width: 150px; */
+        width: clamp(150px, 20vw, 250px);
+        
+        font-weight: bold;
+
+        margin-right: 25px;
+        margin-left: 15px;
+    }
+
+    #notification-icon {
+        width: 24px;
+
+        margin-right: 5px;
+    }
+    
+    .profile-pic-S {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid rgb(197, 197, 197);
+    }
+    
+    .profile-pic-L {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid rgb(197, 197, 197);
+        
+        margin-right: 15px;
+    }
+
+    #header-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        margin: 20px 20px 0 30px;
+    }
+
+    #profile-bottom {
+        display: flex;
+        align-items: center;
+
+        font-weight: bold;
+
+        margin-bottom: 12px;
+        margin-right: 12px;
+    }
+
+    #greeting {
+        font-size: 0.75rem;
+
+        margin-bottom: 5px;
+        padding-left: 5px;
+    }
+    
+    #greeting .profile-name {
+        font-size: 1.5rem;
+    }
+
+    #post-buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        width: 25vw;
+
+        margin-bottom: 18px;
+    }
+
+    #post-buttons button {
+        background-color: #1992d4;
+        border-radius: 15px;
+        border: none;
+        color: white;
+        font-weight: bold;
+
+        width: 75px;
+        height: 30px;
+
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+
+    /* ----- /HEADER ----- */
+
+    /* ----- MAIN ----- */
+
+        main {
+            grid-column: 2 / span 1;
+            grid-row: 2 / span 1;
+
+            display: grid;
+
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            padding: 30px 20px 40px 20px;
+        }
+
+        /* #projects, #announcements, #trending {
+        } */
+
+        /* ----- PROJECTS ----- */
+
+        #projects {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 2;
+
+            margin-right: 20px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        #projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+            /* ----- CARD ----- */
+
+            .card {
+                width: 48%;
+                height: 180px;
+                min-width: 265px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0px 2px 3px rgb(175, 175, 175);
+
+                background-image: linear-gradient(to right, #f0b429 2.5%, transparent 2.5%, transparent);
+
+                margin-bottom: 20px;
+                margin-right: 10px;
+                padding: 30px 20px 20px 20px;
+            }
+
+            .card-text {
+                font-size: 0.75rem;
+                color: rgb(88, 88, 88);
+            }
+
+            .card-title {
+                font-size: 1rem;
+                color: black;
+                font-weight: bold;
+
+                margin-bottom: 3px;
+            }
+
+            .card-icons {
+                display: flex;
+                justify-content: flex-end;
+
+                list-style: none;
+            }
+
+            .card-icons li {
+                margin-left: 20px;
+                width: 24px;
+                height: 24px;
+            }
+
+            /* ----- /CARD ----- */
+
+        /* ----- /PROJECTS ----- */
+
+        /* ----- ANNOUNCEMENTS ----- */
+
+        .section-content {
+            min-width: 231px;
+
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 2px 3px rgb(175, 175, 175);
+
+            padding: 20px 20px 20px 25px;
+        }
+
+        #announcements hr {
+            margin: 15px 0;
+        }
+
+        /* ----- /ANNOUNCEMENTS ----- */
+
+        /* ----- TRENDING ----- */
+
+        .person {
+            display: flex;
+            align-items: center;
+            padding-bottom: 15px;
+        }
+
+        .person img {
+            margin-right: 10px;
+        }
+
+        .person-text {
+            font-size: 0.75rem;
+            color: rgb(88, 88, 88);
+        }
+
+        .username {
+            color: black;
+        }
+
+        /* ----- /TRENDING ----- */
+
+    /* ----- /MAIN ----- */
+
+    /* ----- FOOTER ----- */
+
+    footer {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 1.25rem;
+        background-color: white;
+        
+        box-shadow: 0px 2px 3px rgb(175, 175, 175);
+    }
+
+    /* ----- /FOOTER ----- */
+
+/* ----- /PAGE ----- */

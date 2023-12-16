@@ -6,4 +6,4 @@ Project: Admin Dashboard<br>
 <br>
 In this project, an admin dashboard is built and styled.<br>
 <br>
-https://dmortal1.github.io/odin-signup-form/
+https://dmortal1.github.io/odin-admin-dashboard/
